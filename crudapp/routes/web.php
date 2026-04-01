@@ -1,6 +1,9 @@
-use App\Http\Controllers\PostController;
+<?php
 
-Route::resource('posts', PostController::class);
+use App\Http\Controllers\EmployeeController;
+use Illuminate\Support\Facades\Route;
+
+Route::resource('employees', EmployeeController::class);
 Route::get('/', function () {
-    return redirect('/posts');
+    return redirect('/employees');
 });
