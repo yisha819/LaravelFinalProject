@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\LeaveRequestController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,8 +30,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Your Employee CRUD
+    // CRUD Routes
     Route::resource('employees', EmployeeController::class);
+    Route::resource('departments', DepartmentController::class);
+    Route::resource('leave-requests', LeaveRequestController::class);
+    Route::resource('projects', ProjectController::class);
+    Route::resource('users', UserController::class);
 });
 
 // This loads login, register, logout, etc.

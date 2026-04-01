@@ -19,6 +19,22 @@
                     <x-nav-link href="/employees" :active="request()->is('employees*')">
                         {{ __('Employees List') }}
                     </x-nav-link>
+
+                    <x-nav-link href="/departments" :active="request()->is('departments*')">
+                        {{ __('Departments') }}
+                    </x-nav-link>
+
+                    <x-nav-link href="/leave-requests" :active="request()->is('leave-requests*')">
+                        {{ __('Leave Requests') }}
+                    </x-nav-link>
+
+                    <x-nav-link href="/projects" :active="request()->is('projects*')">
+                        {{ __('Projects') }}
+                    </x-nav-link>
+
+                    <x-nav-link href="/users" :active="request()->is('users*')">
+                        {{ __('Users') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -75,6 +91,26 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="/employees" :active="request()->is('employees*')">
+                {{ __('Employees List') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="/departments" :active="request()->is('departments*')">
+                {{ __('Departments') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="/leave-requests" :active="request()->is('leave-requests*')">
+                {{ __('Leave Requests') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="/projects" :active="request()->is('projects*')">
+                {{ __('Projects') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="/users" :active="request()->is('users*')">
+                {{ __('Users') }}
             </x-responsive-nav-link>
         </div>
 
