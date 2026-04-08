@@ -36,6 +36,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('leave-requests', LeaveRequestController::class);
     Route::resource('projects', ProjectController::class);
     Route::resource('users', UserController::class);
+    Route::resource('attendances', App\Http\Controllers\AttendanceController::class);
 });
 
 // This loads login, register, logout, etc.
